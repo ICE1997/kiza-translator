@@ -1,0 +1,62 @@
+{
+  "extName": {
+    "message": "Kiza Translator"
+  },
+  "extDesc": {
+    "message": "Translator powered by ChatGPT."
+  },
+  "translate": {
+    "message": "Translate"
+  },
+  "Close": {
+    "message": "Close"
+  },
+  "translating": {
+    "message": "Translating..."
+  },
+  "errorOccurs": {
+    "message": "Error"
+  },
+  "requireToken": {
+    "message": "Token is required"
+  },
+  "invalidToken": {
+    "message": "Invalid token"
+  },
+  "requestFailed": {
+    "message": "Request failed"
+  },
+  "ok": {
+    "message": "OK"
+  },
+  "yes": {
+    "message": "Yes"
+  },
+  "no": {
+    "message": "No"
+  },
+  "general": {
+    "message": "General"
+  },
+  "linkSentenceContext": {
+    "message": "Link Sentence Context"
+  },
+  "customPrompt": {
+    "message": "Custom Prompt"
+  },
+  "customPromptTips": {
+    "message": "tips: Available macros：{{CTX}}(Sentence context) | {{MT}}(Mother tongue) | {{OT}}(Original text)"
+  },
+  "customCSS": {
+    "message": "Custom CSS"
+  },
+  "motherTongue": {
+    "message": "Mother Tongue"
+  },
+  "token": {
+    "message": "Token"
+  },
+  "reversedProxy": {
+    "message": "Reversed Proxy"
+  }
+}

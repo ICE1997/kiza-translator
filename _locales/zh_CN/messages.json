@@ -1,0 +1,62 @@
+{
+  "extName": {
+    "message": "Kiza Translator"
+  },
+  "extDesc": {
+    "message": "由ChatGPT驱动的翻译拓展。"
+  },
+  "translate": {
+    "message": "翻译"
+  },
+  "Close": {
+    "message": "关闭"
+  },
+  "translating": {
+    "message": "翻译中..."
+  },
+  "errorOccurs": {
+    "message": "出错啦～"
+  },
+  "requireToken": {
+    "message": "请设置令牌"
+  },
+  "invalidToken": {
+    "message": "无效令牌"
+  },
+  "requestFailed": {
+    "message": "请求失败"
+  },
+  "ok": {
+    "message": "确认"
+  },
+  "yes": {
+    "message": "是"
+  },
+  "no": {
+    "message": "否"
+  },
+  "general": {
+    "message": "通用"
+  },
+  "linkSentenceContext": {
+    "message": "关联段落上下文"
+  },
+  "customPrompt": {
+    "message": "自定义提示词"
+  },
+  "customPromptTips": {
+    "message": "tips: 可用宏：{{CTX}}(语句上下文) | {{MT}}(母语) | {{OT}}(原文本)"
+  },
+  "customCSS": {
+    "message": "自定义样式"
+  },
+  "motherTongue": {
+    "message": "母语"
+  },
+  "token": {
+    "message": "令牌"
+  },
+  "reversedProxy": {
+    "message": "反向代理"
+  }
+}

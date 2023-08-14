@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+        * {
+            resize: none;
+        }
+
+        .ktranslator-settings {
+            display: flex;
+            border: solid 1px #000;
+            width: 480px;
+            padding: 2px;
+        }
+
+        .ktranslator-tabs {
+            display: flex;
+            padding: 4px;
+            flex-direction: column;
+            border: solid 1px #000;
+        }
+
+        .ktranslator-tabs > .ktranslator-tab {
+            display: flex;
+            margin-bottom: 8px;
+            padding: 4px;
+            border: solid 1px #000;
+        }
+
+        .ktranslator-tabs > .ktranslator-tab:last-child {
+            margin-bottom: 0;
+        }
+
+        .ktranslator-tabs > .ktranslator-tab__active {
+            background-color: black;
+            color: white;
+        }
+
+        .ktranslator-tab-contents {
+            flex: 1;
+            padding: 4px;
+            text-align: center;
+        }
+
+        .ktranslator-tab-contents > .ktranslator-tab-content {
+            display: none;
+        }
+
+        .ktranslator-tab-contents > .ktranslator-tab-content__active {
+            display: block;
+        }
+
+        .ktranslator-settings--general {
+            display: inline-block;
+            margin: 0 auto;
+        }
+
+        .ktranslator-settings--simple-input {
+            display: block;
+            text-align: left;
+            width: 300px;
+            margin-bottom: 8px;
+        }
+
+        .ktranslator-settings--simple-input:last-child {
+            margin-bottom: 0;
+        }
+
+        .ktranslator-settings--simple-input > p {
+            color: grey;
+            padding: 0;
+            margin: 0 0 2px;
+        }
+
+        .ktranslator-settings--simple-input > input,
+        select {
+            width: 240px;
+            box-sizing: border-box;
+        }
+
+        .ktranslator-settings--prompt {
+            display: inline-block;
+            width: 320px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .ktranslator-settings--prompt > textarea {
+            display: block;
+            width: 100%;
+            min-height: 200px;
+            margin: 0 auto 8px;
+            text-align: left;
+            padding: 4px;
+        }
+
+        .ktranslator-settings--css {
+            display: inline-block;
+            width: 320px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .ktranslator-settings--css > textarea {
+            display: block;
+            width: 100%;
+            min-height: 200px;
+            margin: 0 auto 8px;
+            text-align: left;
+            padding: 4px;
+        }
+    </style>
+</head>
+
+<body style="resize: none;">
+<div class="ktranslator-settings">
+    <div class="ktranslator-tabs" id="ktranslator-tabs" active-tab-index="0">
+        <div class="ktranslator-tab ktranslator-tab__active" index="0">
+            __MSG_@general__
+        </div>
+        <div class="ktranslator-tab" index="1">
+            __MSG_@customPrompt__
+        </div>
+        <div class="ktranslator-tab" index="2">
+            __MSG_@customCSS__
+        </div>
+    </div>
+    <div class="ktranslator-tab-contents" id="ktranslator-tab-contents">
+        <div class="ktranslator-tab-content ktranslator-tab-content__active" index="0">
+            <div class="ktranslator-settings--general">
+                <div class="ktranslator-settings--simple-input">
+                    <p> __MSG_@linkSentenceContext__</p>
+                    <input style="width: 20px;" type="radio" id="ktranslator-settings-enable-sentence-context-radio"
+                           name="sentence-context-radio" value="true"/>
+                    <label for="ktranslator-settings-enable-sentence-context-radio">__MSG_@yes__</label>
+                    <input style="width: 20px;" type="radio"
+                           id="ktranslator-settings-disable-sentence-context-radio" name="sentence-context-radio"
+                           value="false"/>
+                    <label for="ktranslator-settings-disable-sentence-context-radio">__MSG_@no__</label>
+                </div>
+
+                <div class="ktranslator-settings--simple-input">
+                    <p>__MSG_@motherTongue__</p>
+                    <select id="ktranslator-settings-language-selector">
+                    </select>
+                </div>
+
+                <div class="ktranslator-settings--simple-input">
+                    <p>__MSG_@token__</p>
+                    <input id="ktranslator-settings-token-input"/>
+                    <button id="ktranslator-settings-token-button">__MSG_@ok__</button>
+                </div>
+
+                <div class="ktranslator-settings--simple-input">
+                    <p>__MSG_@reversedProxy__</p>
+                    <input id="ktranslator-settings-proxy-input"/>
+                    <button id="ktranslator-settings-proxy-button">__MSG_@ok__</button>
+                </div>
+            </div>
+        </div>
+        <div class="ktranslator-tab-content" index="1">
+            <div class="ktranslator-settings--prompt">
+                <p style="margin-bottom: 4px; font-size: smaller; color: red;">__MSG_@customPromptTips__</p>
+                <textarea id="ktranslator-settings-prompt-input"></textarea>
+                <button id="ktranslator-settings-prompt-button">__MSG_@ok__</button>
+            </div>
+        </div>
+        <div class="ktranslator-tab-content" index="2">
+            <div class="ktranslator-settings--css">
+                <textarea id="ktranslator-settings-css-input"></textarea>
+                <button id="ktranslator-settings-css-button">__MSG_@ok__</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./popup.ts" type="module"></script>
+</body>
+</html>
